@@ -9,7 +9,7 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 
-COOKIE_FILE = 'cookies_tri_do.json'
+COOKIE_FILE = 'cookies_truong_diem.json'
 
 def get_random_question(questions):
     return random.choice(questions)
@@ -30,6 +30,9 @@ def load_cookies(driver, path):
                 del cookie['sameSite']  # Fix cho ChromeDriver mới
             driver.add_cookie(cookie)
     print("🔐 Đã nạp cookies thành công.")
+
+def remove_non_bmp(text):
+    return ''.join(c for c in text if ord(c) <= 0xFFFF)
 
 # Setup Chrome
 options = webdriver.ChromeOptions()
@@ -88,10 +91,11 @@ with webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=
 
                 for i in range(qtd_comment):
                     random_comment = get_random_question(questions)
-                    comment_box.send_keys(random_comment)
+                    safe_comment = remove_non_bmp(random_comment)
+                    comment_box.send_keys(safe_comment)
                     time.sleep(1)
                     comment_box.send_keys(Keys.ENTER)
-                    print(f"✅ Đã comment {count}/{qtd_comment}: {random_comment}")
+                    print(f"✅ Đã comment {count}/{qtd_comment}: {safe_comment}")
                     time.sleep(3)
 
                     random_delay(5, 15)
