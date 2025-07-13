@@ -1,0 +1,57 @@
+{
+  "groups": [
+    "https://www.facebook.com/groups/701819033164816",
+    "https://www.facebook.com/groups/203517952773448/",
+    "https://www.facebook.com/groups/chuyennhagiaretphcm/",
+    "https://www.facebook.com/groups/409803393547052/",
+    "https://www.facebook.com/groups/216829247282577/",
+    "https://www.facebook.com/groups/1011901890716122/"
+  ],
+  "posts_per_group": 20,
+  "scroll_delay": 2,
+  "comment_delay": [
+    3,
+    8
+  ],
+  "customer_keywords": [
+    "cần chuyển",
+    "tìm dịch vụ",
+    "ai biết",
+    "giới thiệu",
+    "chuyển trọ",
+    "chuyển nhà",
+    "dọn nhà",
+    "vận chuyển",
+    "cần thuê",
+    "help",
+    "giúp đỡ",
+    "tư vấn",
+    "báo giá"
+  ],
+  "service_keywords": [
+    "dịch vụ chuyển",
+    "công ty",
+    "chuyên nghiệp",
+    "uy tín",
+    "giá rẻ",
+    "liên hệ",
+    "hotline",
+    "chúng tôi",
+    "chúng em",
+    "team",
+    "ekip"
+  ],
+  "skip_keywords": [
+    "admin",
+    "mod",
+    "thông báo",
+    "quy định",
+    "pin"
+  ],
+  "marketing_comments": [
+    "Chào bạn! Team mình chuyên dịch vụ chuyển nhà uy tín, giá tốt. Inbox mình tư vấn chi tiết nhé! 😊",
+    "Hi bạn! Mình có team chuyển nhà chuyên nghiệp, bao bọc cẩn thận. Nhắn tin mình báo giá luôn nha! 📞",
+    "Chào bạn! Dịch vụ chuyển nhà của mình uy tín, giá hợp lý. Có xe tải đủ loại. Inbox ngay để được tư vấn! 🚛",
+    "Hi! Team mình chuyên chuyển nhà trọn gói, bao đóng gói. Phục vụ 24/7. Nhắn tin mình báo giá chi tiết nhé! ⭐"
+  ]
+}

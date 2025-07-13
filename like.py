@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 
-COOKIE_FILE = 'cookies_tri_do.json'
+COOKIE_FILE = 'cookies_thom_do.json'
 
 def random_delay(min_s=3, max_s=6):
     time.sleep(random.uniform(min_s, max_s))
@@ -31,7 +31,7 @@ options.add_argument("--start-maximized")
 
 with webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options) as driver:
     config = json.load(open('config.json', 'r', encoding='utf-8'))
-    post_links = config['posts2']  # Chứa danh sách các link bài viết
+    post_links = config['delivery3']  # Chứa danh sách các link bài viết
 
     driver.get("https://www.facebook.com/")
     time.sleep(5)

@@ -9,7 +9,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.action_chains import ActionChains
 from webdriver_manager.chrome import ChromeDriverManager
 
-COOKIE_FILE = 'cookies_truong_diem.json'
+COOKIE_FILE = 'cookies_hoang_thien.json'
+SOURCE = 'd1'
 
 def get_random_question(questions):
     return random.choice(questions)
@@ -41,7 +42,7 @@ options.add_argument("--start-maximized")
 with webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options) as driver:
     config = json.load(open('config.json', 'r', encoding='utf-8'))
 
-    post_links = config['posts2']
+    post_links = config[SOURCE]
     qtd_comment = config['qtd_comment']
     questions = config['questions2']
     count = 0
